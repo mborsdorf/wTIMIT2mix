@@ -1,2 +1,4 @@
 # wTIMIT2mix
-Instructions for simulating the wTIMIT2mix dataset that can be used for speech separation tasks.
+Instructions for simulating the wTIMIT2mix dataset.
+
+## This repository is still under construction. The final version will be published soon. Thank you for your understanding.
