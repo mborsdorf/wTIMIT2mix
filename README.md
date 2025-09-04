@@ -1,3 +1,5 @@
+UNDER CONSTRUCTION
+
 wTIMIT2mix: A Cocktail Party Mixtures Database to Study Target Speaker Extraction for Normal and Whispered Speech
 ---
 wTIMIT2mix is a new cocktail party mixtures speech database for the purpose of developing speech separation models. It can be used for the blind source separation algorithm and the target speaker extraction algorithm. 
@@ -8,14 +10,26 @@ wTIMIT2mix provides cocktail party mixture signals of two overlapping voices, th
 3) $Mix_W-Ref_N$: While the target reference signal is given in normal speech, the voices in the mixture signal are given in whispered speech.
 4) $Mix_N-Ref_W$: While the target reference signal is given in whispered speech, the voices in the mixture signal are given in normal speech.
 
-The database consists of a training set, a validation set, a speaker-dependent (closed-set) test set, and a speaker-independent (open-set) test set.
+The database consists of a training set, a validation set, a speaker-dependent (closed-set) test set, and a speaker-independent (open-set) test set. All the utterances for each speaker are given in both normal speech and whispered speech.
+The training and the validation set share the same speakers but with different utterances. The utterances in both test sets are the same and different to the training and valdiation utterances. The speakers in the closed-set test set are the same as in the training and validation sets. The speakers in the open-set test set are different to the speakers in the training and validation sets.
 
 ## Procedure for the construction of wTIMIT2Mix
 
 1) Please get the original wTIMIT speech database. You can request it by contacting B. P. Lim:
    > B. P. Lim, “Computational Differences Between Whispered and Non-whispered Speech,” PhD Thesis, UIUC, 2010.
-2) 
+2) Merge all speaker folders from both normal and whispered speech as well as from both Singaporean English and American English into one strucutre according to:
+   data/
+   .../000/s000u036n.WAV
+   .../000/s000u036w.WAV
+   ...
+   .../131/s131u447n.WAV
+   .../131/s131u447w.WAV
+4) Clone this repository
+5) A few samples from wTMIT are sorted out. The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**.
+6) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**.
 
+
+The wTIMIT2mix database is simulated as a "max version". That means, when mixing two utterances, the shorter one is padded with zeros to match the length of the longer one.
 
 
 ## Our Paper
