@@ -18,12 +18,17 @@ The training and the validation set share the same speakers but with different u
 1) Please get the original wTIMIT speech database. You can request it by contacting B. P. Lim:
    > B. P. Lim, “Computational Differences Between Whispered and Non-whispered Speech,” PhD Thesis, UIUC, 2010.
 2) Merge all speaker folders from both normal and whispered speech as well as from both Singaporean English and American English into one strucutre according to:
-   data/
-   .../000/s000u036n.WAV
-   .../000/s000u036w.WAV
+3) 
+   /data/000/s000u036n.WAV
+   
+   /data/000/s000u036w.WAV
+   
    ...
-   .../131/s131u447n.WAV
-   .../131/s131u447w.WAV
+   
+   /data/131/s131u447n.WAV
+   
+   /data/131/s131u447w.WAV
+   
 4) Clone this repository
 5) A few samples from wTMIT are sorted out. The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**.
 6) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**.
