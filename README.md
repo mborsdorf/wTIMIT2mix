@@ -32,7 +32,7 @@ The training and the validation set share the same speakers but with different u
 4) Clone this repository
 5) A few samples from wTMIT are sorted out. The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**.
 6) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**.
-
+7) The data lists for training, validation, and testing are given in the folder **data_lists**. Please adjust the paths given in the files according to your system.
 
 The wTIMIT2mix database is simulated as a "max version". That means, when mixing two utterances, the shorter one is padded with zeros to match the length of the longer one.
 
