@@ -17,8 +17,8 @@ The training and the validation set share the same speakers but with different u
 
 1) Please get the original wTIMIT speech database. You can request it by contacting B. P. Lim:
    > B. P. Lim, “Computational Differences Between Whispered and Non-whispered Speech,” PhD Thesis, UIUC, 2010.
-2) Merge all speaker folders from both normal and whispered speech as well as from both Singaporean English and American English into one strucutre according to:
-3) 
+2) Clone this repository.
+3) Merge all speaker folders from both normal and whispered speech as well as from both Singaporean English and American English into one structure according to:
    /data/000/s000u036n.WAV
    
    /data/000/s000u036w.WAV
@@ -29,10 +29,11 @@ The training and the validation set share the same speakers but with different u
    
    /data/131/s131u447w.WAV
    
-4) Clone this repository
-5) A few samples from wTMIT are sorted out. The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**.
+4) A few samples from wTMIT are sorted out. Please copy the original files into a TODO
+5) The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**.
 6) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**.
-7) The data lists for training, validation, and testing are given in the folder **data_lists**. Please adjust the paths given in the files according to your system.
+     - Open the file 
+7) The data lists for training, validation, and testing are given in the folder **data_lists**. Please adjust the paths given in the files according to your system. The **mix.scp** file contains the paths to the cocktail party mixture files, the **ref.scp** file contains the paths to the ground truth files for the extracted target speech signals, and the **aux_.scp** file contains the paths to the target speaker reference files that steer the target speaker extraction algorithm. The target reference signals are given by unprocessed, but downsampled to 8 kHz, single utterances from the raw WTIMIT speech database.
 8) The file **wTIMIT2mix_extr_targets.spk** contains the speaker identities required for training and validation.
 
 The wTIMIT2mix database is simulated as a "max version". That means, when mixing two utterances, the shorter one is padded with zeros to match the length of the longer one.
