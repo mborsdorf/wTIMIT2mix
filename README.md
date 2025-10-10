@@ -54,8 +54,6 @@ If you enjoyed working with the wTIMIT2mix database, please cite us:
 [2] Y. Isik, J. Le Roux, S. Watanabe Z. Chen, and J. R. Hershey, “Scripts to Create wsj0-2 Speaker Mixtures,” MERL Research. Retrieved June 2, 2020, from https://www.merl.com/demos/deep-clustering/create-speaker-mixtures.zip, [Online].
 
 ## License
-
-## License
 The Apache 2.0 license applies to the script to generate wTIMIT2mix. You can get access to the used wTIMIT database by contacting B. P. Lim:
    > B. P. Lim, “Computational Differences Between Whispered and Non-whispered Speech,” PhD Thesis, UIUC, 2010.
 
