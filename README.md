@@ -29,7 +29,7 @@ The training and the validation set share the same speakers but with different u
    /data/131/s131u447w.WAV
    
 4) The exact speaker and utterance information including the SNR values between speakers to simulate the wTIMIT2mix database are given in the folder **mixture_infos**. The wTIMIT2mix database is simulated as a "max version". That means, when mixing two utterances, the shorter one is padded with zeros to match the length of the longer one. Here, wTIMIT2mix is simulated with a sampling frequency of 8 kHz. Note: A few samples from wTMIT are sorted out and are not considered in the simulation.
-5) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**. Please run the file **create_wTIMIT2mix.m**.
+5) The matlab scripts to simulate the actual cocktail party mixtures data and the contributing ground truth data are given in the folder **simulation_scripts**. Please run the files **create_wTIMIT2mix_normal.m** and **create_wTIMIT2mix_whispered.m**.
 6) For the target speaker extraction algorithm, an additional target speaker reference is required. For this, the original wTIMIT data needs to be downsampled to 8 kHz to match the sampling rate of wTIMIT2mix. Please run the script **resample_utterances.m** to resample the data (an 8 kHz copy will be created).
 7) The data lists for training, validation, and testing are given in the folder **data_lists**. Please adjust the paths given in the files according to where you stored the simulated wTIMIT2mix database. The **mix.scp** file contains the paths to the cocktail party mixture files, the **ref.scp** file contains the paths to the ground truth files for the extracted target speech signals, and the **aux_.scp** file contains the paths to the target speaker reference files that steer the target speaker extraction algorithm.
 8) The file **wTIMIT2mix_extr_targets.spk** contains the speaker identities required for training and validation.
@@ -46,3 +46,10 @@ If you enjoyed working with the wTIMIT2mix database, please cite us:
   doi       = {10.21437/Interspeech.2024-1172},
   issn      = {2958-1796}}
 ```
+
+## License
+The Apache 2.0 license applies to the script to generate wTIMIT2mix. You can get access to the used wTIMIT database by contacting B. P. Lim:
+   > B. P. Lim, “Computational Differences Between Whispered and Non-whispered Speech,” PhD Thesis, UIUC, 2010.
+
+You can find further information in the specific directory.  
+
