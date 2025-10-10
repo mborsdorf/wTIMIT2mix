@@ -1,5 +1,7 @@
 wTIMIT2mix: A Cocktail Party Mixtures Database to Study Target Speaker Extraction for Normal and Whispered Speech
 ---
+The simulations scripts are based on the ones to create the wsj0-2mix database as used in [1]. We slightly have changed the main script for our purposes. For the original scripts please consult [2].
+
 wTIMIT2mix is a new cocktail party mixtures speech database for the purpose of developing speech separation models. It can be used for the blind source separation algorithm and the target speaker extraction algorithm. 
 wTIMIT2mix provides cocktail party mixture signals of two overlapping voices, the respective single sources (ground truth signals), and reference signals of the target speakers. Both speakers in the cocktail party mixture signal always speak in the same speech mode, i.e. either normal speech or whispered speech. They change the speech mode simultaneously. Since the target speaker reference signal relies on the past-extracted speech signal of the target speaker in real-world application scenarions, the speech mode given in the target reference signal may or may not the speech mode given in the speech mixture signal (depending on whether or not both speakers have changed the speech mode since the last time frame). This leads to four TSE scenarios as follows:
 
@@ -46,6 +48,12 @@ If you enjoyed working with the wTIMIT2mix database, please cite us:
   doi       = {10.21437/Interspeech.2024-1172},
   issn      = {2958-1796}}
 ```
+
+## References
+[1] J. R. Hershey, Z. Chen, J. Le Roux, and S. Watanabe, "Deep Clustering: Discriminative Embeddings for Segmentation and Separation", IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), DOI: 10.1109/ICASSP.2016.7471631, March 2016, pp. 31-35.  
+[2] Y. Isik, J. Le Roux, S. Watanabe Z. Chen, and J. R. Hershey, “Scripts to Create wsj0-2 Speaker Mixtures,” MERL Research. Retrieved June 2, 2020, from https://www.merl.com/demos/deep-clustering/create-speaker-mixtures.zip, [Online].
+
+## License
 
 ## License
 The Apache 2.0 license applies to the script to generate wTIMIT2mix. You can get access to the used wTIMIT database by contacting B. P. Lim:
